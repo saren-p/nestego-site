@@ -200,4 +200,390 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Resource Articles -->
+    <url>
+        <loc>https://www.nestego.com/resources/openclaw-ai-assistance-business-speed/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/openclaw-ai-assistance-business-speed/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/openclaw-ai-assistance-business-speed/"/>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/openclaw-ai-assistance-business-speed/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/openclaw-ai-assistance-business-speed/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/openclaw-ai-assistance-business-speed/"/>
+        <lastmod>2026-02-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/ceo-guide-choosing-msp-canada/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ceo-guide-choosing-msp-canada/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ceo-guide-choosing-msp-canada/"/>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/ceo-guide-choosing-msp-canada/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ceo-guide-choosing-msp-canada/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ceo-guide-choosing-msp-canada/"/>
+        <lastmod>2026-01-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/website-fixes-before-running-ads/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-fixes-before-running-ads/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-fixes-before-running-ads/"/>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/website-fixes-before-running-ads/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-fixes-before-running-ads/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-fixes-before-running-ads/"/>
+        <lastmod>2025-12-14</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/cybersecurity-checklist-canadian-smb-2026/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/cybersecurity-checklist-canadian-smb-2026/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/cybersecurity-checklist-canadian-smb-2026/"/>
+        <lastmod>2025-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/cybersecurity-checklist-canadian-smb-2026/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/cybersecurity-checklist-canadian-smb-2026/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/cybersecurity-checklist-canadian-smb-2026/"/>
+        <lastmod>2025-11-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/rag-answer-engine-smb-no-data-leak/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/rag-answer-engine-smb-no-data-leak/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/rag-answer-engine-smb-no-data-leak/"/>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/rag-answer-engine-smb-no-data-leak/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/rag-answer-engine-smb-no-data-leak/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/rag-answer-engine-smb-no-data-leak/"/>
+        <lastmod>2025-10-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/local-vs-cloud-ai-for-business/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/local-vs-cloud-ai-for-business/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/local-vs-cloud-ai-for-business/"/>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/local-vs-cloud-ai-for-business/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/local-vs-cloud-ai-for-business/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/local-vs-cloud-ai-for-business/"/>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/secure-internal-knowledge-base-rag-permissions/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/secure-internal-knowledge-base-rag-permissions/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/secure-internal-knowledge-base-rag-permissions/"/>
+        <lastmod>2025-08-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/secure-internal-knowledge-base-rag-permissions/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/secure-internal-knowledge-base-rag-permissions/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/secure-internal-knowledge-base-rag-permissions/"/>
+        <lastmod>2025-08-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/ai-customer-support-drafting-triage-human-loop/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-customer-support-drafting-triage-human-loop/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-customer-support-drafting-triage-human-loop/"/>
+        <lastmod>2025-07-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/ai-customer-support-drafting-triage-human-loop/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-customer-support-drafting-triage-human-loop/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-customer-support-drafting-triage-human-loop/"/>
+        <lastmod>2025-07-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/sales-enablement-ai-proposals-crm-guardrails/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/sales-enablement-ai-proposals-crm-guardrails/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/sales-enablement-ai-proposals-crm-guardrails/"/>
+        <lastmod>2025-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/sales-enablement-ai-proposals-crm-guardrails/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/sales-enablement-ai-proposals-crm-guardrails/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/sales-enablement-ai-proposals-crm-guardrails/"/>
+        <lastmod>2025-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/ai-policy-for-smb-allowed-tools-data-rules-rollout/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-policy-for-smb-allowed-tools-data-rules-rollout/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-policy-for-smb-allowed-tools-data-rules-rollout/"/>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/ai-policy-for-smb-allowed-tools-data-rules-rollout/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-policy-for-smb-allowed-tools-data-rules-rollout/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-policy-for-smb-allowed-tools-data-rules-rollout/"/>
+        <lastmod>2025-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/team-prompt-library-reusable-prompts/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/team-prompt-library-reusable-prompts/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/team-prompt-library-reusable-prompts/"/>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/team-prompt-library-reusable-prompts/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/team-prompt-library-reusable-prompts/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/team-prompt-library-reusable-prompts/"/>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/ai-productivity-stack-notes-search-automation/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-productivity-stack-notes-search-automation/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-productivity-stack-notes-search-automation/"/>
+        <lastmod>2025-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/ai-productivity-stack-notes-search-automation/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/ai-productivity-stack-notes-search-automation/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/ai-productivity-stack-notes-search-automation/"/>
+        <lastmod>2025-03-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/managed-website-maintenance-whats-included/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/managed-website-maintenance-whats-included/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/managed-website-maintenance-whats-included/"/>
+        <lastmod>2025-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/managed-website-maintenance-whats-included/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/managed-website-maintenance-whats-included/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/managed-website-maintenance-whats-included/"/>
+        <lastmod>2025-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/website-redesign-checklist-canadian-smb-2025/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-redesign-checklist-canadian-smb-2025/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-redesign-checklist-canadian-smb-2025/"/>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/website-redesign-checklist-canadian-smb-2025/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-redesign-checklist-canadian-smb-2025/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-redesign-checklist-canadian-smb-2025/"/>
+        <lastmod>2025-01-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/spf-dkim-dmarc-without-pain/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/spf-dkim-dmarc-without-pain/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/spf-dkim-dmarc-without-pain/"/>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/spf-dkim-dmarc-without-pain/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/spf-dkim-dmarc-without-pain/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/spf-dkim-dmarc-without-pain/"/>
+        <lastmod>2024-12-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/choosing-hosting-in-canada/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/choosing-hosting-in-canada/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/choosing-hosting-in-canada/"/>
+        <lastmod>2024-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/choosing-hosting-in-canada/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/choosing-hosting-in-canada/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/choosing-hosting-in-canada/"/>
+        <lastmod>2024-11-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/local-seo-montreal-canada-service-businesses/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/local-seo-montreal-canada-service-businesses/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/local-seo-montreal-canada-service-businesses/"/>
+        <lastmod>2024-10-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/local-seo-montreal-canada-service-businesses/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/local-seo-montreal-canada-service-businesses/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/local-seo-montreal-canada-service-businesses/"/>
+        <lastmod>2024-10-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/cyber-hygiene-10-controls-smb/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/cyber-hygiene-10-controls-smb/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/cyber-hygiene-10-controls-smb/"/>
+        <lastmod>2024-09-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/cyber-hygiene-10-controls-smb/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/cyber-hygiene-10-controls-smb/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/cyber-hygiene-10-controls-smb/"/>
+        <lastmod>2024-09-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/website-content-that-converts/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-content-that-converts/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-content-that-converts/"/>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/website-content-that-converts/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/website-content-that-converts/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/website-content-that-converts/"/>
+        <lastmod>2024-08-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/accessibility-basics-wcag-practical-improvements/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/accessibility-basics-wcag-practical-improvements/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/accessibility-basics-wcag-practical-improvements/"/>
+        <lastmod>2024-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/accessibility-basics-wcag-practical-improvements/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/accessibility-basics-wcag-practical-improvements/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/accessibility-basics-wcag-practical-improvements/"/>
+        <lastmod>2024-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/analytics-that-matter-ga4-privacy-kpis/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/analytics-that-matter-ga4-privacy-kpis/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/analytics-that-matter-ga4-privacy-kpis/"/>
+        <lastmod>2024-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/analytics-that-matter-ga4-privacy-kpis/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/analytics-that-matter-ga4-privacy-kpis/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/analytics-that-matter-ga4-privacy-kpis/"/>
+        <lastmod>2024-06-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/performance-101-core-web-vitals-quick-wins/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/performance-101-core-web-vitals-quick-wins/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/performance-101-core-web-vitals-quick-wins/"/>
+        <lastmod>2024-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/performance-101-core-web-vitals-quick-wins/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/performance-101-core-web-vitals-quick-wins/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/performance-101-core-web-vitals-quick-wins/"/>
+        <lastmod>2024-05-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/email-migration-checklist-m365-google-workspace/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/email-migration-checklist-m365-google-workspace/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/email-migration-checklist-m365-google-workspace/"/>
+        <lastmod>2024-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/email-migration-checklist-m365-google-workspace/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/email-migration-checklist-m365-google-workspace/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/email-migration-checklist-m365-google-workspace/"/>
+        <lastmod>2024-05-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/resources/backups-disaster-recovery-what-good-looks-like/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/backups-disaster-recovery-what-good-looks-like/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/backups-disaster-recovery-what-good-looks-like/"/>
+        <lastmod>2024-05-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/ressources/backups-disaster-recovery-what-good-looks-like/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/resources/backups-disaster-recovery-what-good-looks-like/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/ressources/backups-disaster-recovery-what-good-looks-like/"/>
+        <lastmod>2024-05-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
 </urlset>
