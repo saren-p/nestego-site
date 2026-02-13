@@ -1824,7 +1824,7 @@ a:hover { color: var(--accent); }
     margin-bottom: 1.5rem;
 }
 
-/* Keep navbar CTA visible while preventing overflow on small screens */
+/* Prevent navbar overflow and malformed CTA button on smaller screens */
 .header-actions .btn {
     white-space: nowrap;
     flex-shrink: 0;
