@@ -90,7 +90,11 @@
         const normalizedPath = normalizePath(currentPath);
         let targetPath;
 
-        if (routeMap[normalizedPath]) {
+        if (normalizedPath.startsWith('/resources/')) {
+            targetPath = normalizedPath.replace('/resources/', '/fr/ressources/');
+        } else if (normalizedPath.startsWith('/fr/ressources/')) {
+            targetPath = normalizedPath.replace('/fr/ressources/', '/resources/');
+        } else if (routeMap[normalizedPath]) {
             targetPath = routeMap[normalizedPath];
         } else if (reverseRouteMap[normalizedPath]) {
             targetPath = reverseRouteMap[normalizedPath];
@@ -247,6 +251,22 @@
     // ============================================
     // Header Scroll Effect
     // ============================================
+
+
+
+    function initResourcesLoadMore() {
+        const button = document.getElementById('loadMoreResources');
+        const grid = document.getElementById('resourcesGrid');
+        if (!button || !grid) return;
+        const hidden = () => Array.from(grid.querySelectorAll('[data-hidden="true"]')).filter(card => card.style.display === 'none');
+        button.addEventListener('click', function() {
+            hidden().slice(0, 10).forEach(card => { card.style.display = ''; });
+            if (!hidden().length) {
+                button.style.display = 'none';
+            }
+        });
+        if (!hidden().length) button.style.display = 'none';
+    }
 
     function initHeaderScroll() {
         const header = document.getElementById('header');
@@ -603,6 +623,7 @@
         initThemeToggle();
         initLanguageToggle();
         initHeaderScroll();
+        initResourcesLoadMore();
         initServicesMenus();
         initMobileMenu();
         initLogoAnimation();
