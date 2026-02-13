@@ -1,0 +1,23 @@
+name: Validate HTML paths
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  disallow-root-absolute-paths:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail on root-absolute internal HTML paths
+        run: |
+          echo "Checking HTML files for root-absolute href/src paths..."
+          if rg --pcre2 -n '\b(?:href|src)="/(?!/)' --glob '*.html'; then
+            echo "\nFound root-absolute paths in HTML. Use repo-relative paths instead."
+            exit 1
+          fi
+          echo "No root-absolute href/src paths found."
