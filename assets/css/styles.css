@@ -1,7 +1,7 @@
-/* ========================================
+/* ----------------------------------------
    Nestego Production Styles
    Shared CSS for all pages
-   ======================================== */
+   ---------------------------------------- */
 
 /* CSS Variables */
 :root {
@@ -2110,9 +2110,9 @@ a:hover { color: var(--accent); }
 .footer-legal a { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
 .footer-legal a:hover { color: white; }
 
-/* ========================================
+/* ----------------------------------------
    Additional Fixes & Enhancements
-   ======================================== */
+   ---------------------------------------- */
 
 /* 1. CTA Feature Icon Sizing */
 .cta-feature {
