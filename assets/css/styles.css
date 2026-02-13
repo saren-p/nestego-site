@@ -1679,17 +1679,12 @@ a:hover { color: var(--accent); }
 .cta-content {
     position: relative;
     z-index: 1;
-<<<<<<< HEAD
     display: grid;
     gap: 3rem;
     align-items: start;
 }
 @media (min-width: 1024px) {
     .cta-content { grid-template-columns: 1fr 1fr; }
-=======
-    max-width: 720px;
-    margin: 0 auto;
->>>>>>> 163ed0e (Fix CTA layout, navbar overflow/button shape, FR placeholders, and remove footer security links)
 }
 .cta-content h2 { color: white; margin-bottom: 1rem; }
 .cta-content p {
@@ -1748,61 +1743,6 @@ a:hover { color: var(--accent); }
 #contact .cta-form-container h3,
 #contact .cta-form-container .form-label {
     color: var(--secondary);
-}
-
-#contact .cta-content {
-    max-width: none;
-    display: grid;
-    gap: 3rem;
-    align-items: start;
-}
-@media (min-width: 1024px) {
-    #contact .cta-content { grid-template-columns: 1fr 1fr; }
-}
-#contact .cta-text {
-    text-align: left;
-}
-#contact .cta-text p {
-    margin-left: 0;
-    margin-right: 0;
-}
-#contact .cta-form-container {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-    box-shadow: var(--shadow-md);
-}
-[data-theme="dark"] #contact .cta-form-container {
-    background: var(--background);
-    border-color: var(--border);
-}
-#contact .cta-form-container h3,
-#contact .cta-form-container .form-label {
-    color: var(--secondary);
-}
-
-
-
-/* Full-width inner-page CTA sections */
-.section-wrapper .cta-section {
-    border-radius: 0;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-}
-
-/* Header CTA consistency */
-.header-actions .btn {
-    white-space: nowrap;
-    padding: 0.625rem 1rem;
-    font-size: 0.875rem;
-    line-height: 1.2;
-}
-
-@media (max-width: 1023px) {
-    .header-actions .btn {
-        display: none;
-    }
 }
 
 /* Contact Layout */
