@@ -1,7 +1,7 @@
-/* ========================================
+/* ----------------------------------------
    Nestego Production Styles
    Shared CSS for all pages
-   ======================================== */
+   ---------------------------------------- */
 
 /* CSS Variables */
 :root {
@@ -422,12 +422,18 @@ a:hover { color: var(--accent); }
     bottom: 0;
     background: var(--background);
     padding: 2rem;
-    transform: translateX(100%);
-    transition: transform var(--transition-slow);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-base), visibility var(--transition-base);
     z-index: 999;
     overflow-y: auto;
 }
-.mobile-menu.active { transform: translateX(0); }
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
 .mobile-nav { 
     display: flex; 
@@ -441,6 +447,53 @@ a:hover { color: var(--accent); }
     text-decoration: none; 
     padding: 0.75rem 0; 
     border-bottom: 1px solid var(--border); 
+}
+
+.mobile-services-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.mobile-services-toggle svg {
+    width: 18px;
+    height: 18px;
+    transition: transform var(--transition-base);
+}
+
+.mobile-services-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+}
+
+.mobile-services-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+}
+
+.mobile-services-submenu.active {
+    max-height: 420px;
+}
+
+.mobile-sub-link {
+    display: block;
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.625rem 0 0.625rem 1rem;
+    border-left: 2px solid var(--border);
+    margin-left: 0.25rem;
+}
+
+.mobile-sub-link:hover,
+.mobile-sub-link.active {
+    color: var(--primary);
+    border-left-color: var(--accent);
 }
 
 /* Page Hero Section */
@@ -537,7 +590,7 @@ a:hover { color: var(--accent); }
     position: relative; 
     padding: 8rem 0 5rem; 
     background: var(--background); 
-    overflow: visible; 
+    overflow: hidden; 
 }
 @media (min-width: 768px) { .hero { padding: 10rem 0 6rem; } }
 
@@ -1778,7 +1831,28 @@ a:hover { color: var(--accent); }
 }
 
 @media (max-width: 1023px) {
-    .header-actions > .btn {
+    .header-actions {
+        gap: 0.375rem;
+    }
+
+    .header-actions .btn {
+        padding: 0.625rem 0.875rem;
+        font-size: 0.8125rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .header-actions .btn {
+        padding: 0.55rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .header-toggle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text {
         display: none;
     }
 }
@@ -2036,9 +2110,9 @@ a:hover { color: var(--accent); }
 .footer-legal a { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
 .footer-legal a:hover { color: white; }
 
-/* ========================================
+/* ----------------------------------------
    Additional Fixes & Enhancements
-   ======================================== */
+   ---------------------------------------- */
 
 /* 1. CTA Feature Icon Sizing */
 .cta-feature {
