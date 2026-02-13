@@ -1443,6 +1443,12 @@ a:hover { color: var(--accent); }
     border: 1px solid var(--border);
 }
 
+.resource-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .resource-image {
     position: relative;
     height: 200px;
