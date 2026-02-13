@@ -1,0 +1,11 @@
+# robots.txt for Nestego
+# https://www.nestego.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.nestego.com/sitemap.xml
+
+# Disallow admin or private areas (none currently)
+# Disallow: /admin/

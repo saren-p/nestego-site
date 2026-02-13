@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Nestego</title>
+    <meta name="description" content="The page you're looking for doesn't exist or has been moved.">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23143A66' width='32' height='32' rx='6'/%3E%3Cpath d='M8 16L14 10L20 16L14 22Z' fill='%23FF6B5A'/%3E%3Cpath d='M14 16L20 10L26 16L20 22Z' fill='%23F5F7FA' opacity='0.9'/%3E%3C/svg%3E">
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .error-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .error-inner {
+            max-width: 500px;
+        }
+        
+        .error-code {
+            font-size: clamp(6rem, 15vw, 10rem);
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .error-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.125rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .error-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <!-- Header -->
+        <header class="header" id="header" role="banner">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="/" class="logo" id="logo" aria-label="Nestego - Return to homepage">
+                        <span class="logo-mark" aria-hidden="true">
+                            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <rect width="36" height="36" rx="8" fill="#143A66"/>
+                                <path d="M9 18L16 11L23 18L16 25Z" fill="#FF6B5A"/>
+                                <path d="M16 18L23 11L30 18L23 25Z" fill="white" fill-opacity="0.9"/>
+                            </svg>
+                        </span>
+                        <span class="logo-text">Nestego</span>
+                    </a>
+                    
+                    <div class="header-actions">
+                        <a href="/" class="btn btn-primary">Go Home</a>
+                        <button class="header-toggle theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+                            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Error Content -->
+        <main class="error-content">
+            <div class="error-inner">
+                <div class="error-code">404</div>
+                <h1 class="error-title">Page Not Found</h1>
+                <p class="error-message">
+                    Oops! The page you're looking for doesn't exist or has been moved.
+                </p>
+                <div class="error-actions">
+                    <a href="/" class="btn btn-primary btn-lg">
+                        Go to Homepage
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="/contact/" class="btn btn-outline btn-lg">Contact Support</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
