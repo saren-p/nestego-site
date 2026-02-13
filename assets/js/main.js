@@ -62,6 +62,39 @@
         return relativeSegments.length ? `${relativeSegments.join('/')}/` : './';
     }
 
+
+    const resourceSlugMap = {
+        'accessibility-basics-wcag-practical-improvements': 'accessibilite-web-wcag-ameliorations-pratiques',
+        'ai-customer-support-drafting-triage-human-loop': 'ia-service-client-redaction-triage-boucle-humaine',
+        'ai-policy-for-smb-allowed-tools-data-rules-rollout': 'politique-ia-pour-pme-outils-autorises-regles-donnees-deploiement',
+        'ai-productivity-stack-notes-search-automation': 'pile-productivite-ia-notes-recherche-automatisation',
+        'analytics-that-matter-ga4-privacy-kpis': 'analytique-utile-ga4-confidentialite-kpi',
+        'backups-disaster-recovery-what-good-looks-like': 'sauvegardes-reprise-apres-sinistre-bonnes-pratiques',
+        'ceo-guide-choosing-msp-canada': 'guide-pdg-choisir-fournisseur-ti-infogere-canada',
+        'choosing-hosting-in-canada': 'choisir-hebergement-web-canada',
+        'cyber-hygiene-10-controls-smb': 'hygiene-cyber-pme-10-controles-essentiels',
+        'cybersecurity-checklist-canadian-smb-2026': 'liste-verification-cybersecurite-pme-canadiennes-2026',
+        'email-migration-checklist-m365-google-workspace': 'liste-verification-migration-courriel-m365-google-workspace',
+        'local-seo-montreal-canada-service-businesses': 'seo-local-montreal-entreprises-services-canada',
+        'local-vs-cloud-ai-for-business': 'ia-locale-vs-ia-infonuagique-entreprise',
+        'managed-website-maintenance-whats-included': 'maintenance-site-web-geree-ce-qui-est-inclus',
+        'openclaw-ai-assistance-business-speed': 'openclaw-assistance-ia-accelerer-entreprise',
+        'performance-101-core-web-vitals-quick-wins': 'performance-101-core-web-vitals-gains-rapides',
+        'rag-answer-engine-smb-no-data-leak': 'rag-pour-pme-moteur-reponses-sans-fuite-donnees',
+        'sales-enablement-ai-proposals-crm-guardrails': 'ia-activation-ventes-propositions-crm-garde-fous',
+        'secure-internal-knowledge-base-rag-permissions': 'base-connaissances-interne-securisee-rag-permissions',
+        'spf-dkim-dmarc-without-pain': 'spf-dkim-dmarc-sans-douleur',
+        'team-prompt-library-reusable-prompts': 'bibliotheque-prompts-equipe-prompts-reutilisables',
+        'website-content-that-converts': 'contenu-web-qui-convertit',
+        'website-fixes-before-running-ads': 'correctifs-site-web-avant-lancer-publicites',
+        'website-redesign-checklist-canadian-smb-2025': 'liste-verification-refonte-site-web-pme-canadiennes-2025',
+    };
+
+    const reverseResourceSlugMap = {};
+    Object.keys(resourceSlugMap).forEach(enSlug => {
+        reverseResourceSlugMap[resourceSlugMap[enSlug]] = enSlug;
+    });
+
     // Create reverse map (FR → EN)
     const reverseRouteMap = {};
     Object.keys(routeMap).forEach(en => {
@@ -91,9 +124,23 @@
         let targetPath;
 
         if (normalizedPath.startsWith('/resources/')) {
-            targetPath = normalizedPath.replace('/resources/', '/fr/ressources/');
+            const match = normalizedPath.match(/^\/resources\/([^/]+)\/$/);
+            if (match) {
+                const enSlug = match[1];
+                const frSlug = resourceSlugMap[enSlug] || enSlug;
+                targetPath = `/fr/ressources/${frSlug}/`;
+            } else {
+                targetPath = normalizedPath.replace('/resources/', '/fr/ressources/');
+            }
         } else if (normalizedPath.startsWith('/fr/ressources/')) {
-            targetPath = normalizedPath.replace('/fr/ressources/', '/resources/');
+            const match = normalizedPath.match(/^\/fr\/ressources\/([^/]+)\/$/);
+            if (match) {
+                const frSlug = match[1];
+                const enSlug = reverseResourceSlugMap[frSlug] || frSlug;
+                targetPath = `/resources/${enSlug}/`;
+            } else {
+                targetPath = normalizedPath.replace('/fr/ressources/', '/resources/');
+            }
         } else if (routeMap[normalizedPath]) {
             targetPath = routeMap[normalizedPath];
         } else if (reverseRouteMap[normalizedPath]) {
