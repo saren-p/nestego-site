@@ -30,6 +30,38 @@
         '/legal/terms/': '/fr/legal/conditions/'
     };
 
+    function normalizePath(path) {
+        let normalizedPath = path || '/';
+
+        // Remove GitHub Pages repository base path if present (e.g. /nestego-site)
+        normalizedPath = normalizedPath.replace(/^\/nestego-site(?=\/|$)/, '');
+
+        if (!normalizedPath.startsWith('/')) {
+            normalizedPath = `/${normalizedPath}`;
+        }
+        if (!normalizedPath.endsWith('/')) {
+            normalizedPath += '/';
+        }
+
+        return normalizedPath || '/';
+    }
+
+    function toRelativePath(fromPath, toPath) {
+        const fromSegments = fromPath.replace(/^\//, '').replace(/\/$/, '').split('/').filter(Boolean);
+        const toSegments = toPath.replace(/^\//, '').replace(/\/$/, '').split('/').filter(Boolean);
+
+        let shared = 0;
+        while (shared < fromSegments.length && shared < toSegments.length && fromSegments[shared] === toSegments[shared]) {
+            shared += 1;
+        }
+
+        const upSegments = fromSegments.slice(shared).map(() => '..');
+        const downSegments = toSegments.slice(shared);
+        const relativeSegments = [...upSegments, ...downSegments];
+
+        return relativeSegments.length ? `${relativeSegments.join('/')}/` : './';
+    }
+
     // Create reverse map (FR → EN)
     const reverseRouteMap = {};
     Object.keys(routeMap).forEach(en => {
@@ -45,8 +77,8 @@
      * @returns {'en' | 'fr'}
      */
     function getCurrentLanguage() {
-        const path = window.location.pathname;
-        return path.startsWith('/fr') ? 'fr' : 'en';
+        const path = normalizePath(window.location.pathname);
+        return path.startsWith('/fr/') ? 'fr' : 'en';
     }
 
     /**
@@ -55,27 +87,21 @@
      * @returns {string} - Equivalent path in other language
      */
     function getEquivalentRoute(currentPath) {
-        // Normalize path (ensure trailing slash)
-        let normalizedPath = currentPath;
-        if (!normalizedPath.endsWith('/') && normalizedPath !== '/') {
-            normalizedPath += '/';
-        }
+        const normalizedPath = normalizePath(currentPath);
+        let targetPath;
 
-        // Check if current path is in the route map
         if (routeMap[normalizedPath]) {
-            return routeMap[normalizedPath];
-        }
-        if (reverseRouteMap[normalizedPath]) {
-            return reverseRouteMap[normalizedPath];
+            targetPath = routeMap[normalizedPath];
+        } else if (reverseRouteMap[normalizedPath]) {
+            targetPath = reverseRouteMap[normalizedPath];
+        } else {
+            const currentLang = getCurrentLanguage();
+            targetPath = currentLang === 'en'
+                ? `/fr${normalizedPath === '/' ? '/' : normalizedPath}`
+                : normalizedPath.replace(/^\/fr/, '') || '/';
         }
 
-        // Fallback: simple language prefix swap
-        const currentLang = getCurrentLanguage();
-        if (currentLang === 'en') {
-            return '/fr' + normalizedPath;
-        } else {
-            return normalizedPath.replace(/^\/fr/, '') || '/';
-        }
+        return toRelativePath(normalizedPath, normalizePath(targetPath));
     }
 
     /**
