@@ -32,36 +32,36 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23143A66' width='32' height='32' rx='6'/%3E%3Cpath d='M8 16L14 10L20 16L14 22Z' fill='%23FF6B5A'/%3E%3Cpath d='M14 16L20 10L26 16L20 22Z' fill='%23F5F7FA' opacity='0.9'/%3E%3C/svg%3E">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header" role="banner">
         <div class="container">
             <div class="header-inner">
-                <a href="/" class="logo" id="logo" aria-label="Nestego - Return to homepage">
+                <a href="../" class="logo" id="logo" aria-label="Nestego - Return to homepage">
                     <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="36" height="36" rx="8" fill="#143A66"/><path d="M9 18L16 11L23 18L16 25Z" fill="#FF6B5A"/><path d="M16 18L23 11L30 18L23 25Z" fill="white" fill-opacity="0.9"/></svg></span>
                     <span class="logo-text">Nestego</span>
                 </a>
                 <nav class="nav" role="navigation" aria-label="Main navigation">
-                    <div class="nav-item"><a href="/" class="nav-link">Home</a></div>
-                    <div class="nav-item"><a href="/about-us/" class="nav-link">About Us</a></div>
+                    <div class="nav-item"><a href="../" class="nav-link">Home</a></div>
+                    <div class="nav-item"><a href="../about-us/" class="nav-link">About Us</a></div>
                     <div class="nav-item">
-                        <a href="/#services" class="nav-link" aria-haspopup="true" aria-expanded="false">Services<svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+                        <a href="#services" class="nav-link" aria-haspopup="true" aria-expanded="false">Services<svg class="dropdown-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
                         <div class="dropdown-menu" role="menu">
-                            <a href="/services/web-design/" class="dropdown-link" role="menuitem">Web Design</a>
-                            <a href="/services/managed-it/" class="dropdown-link" role="menuitem">Managed IT</a>
-                            <a href="/services/cybersecurity/" class="dropdown-link" role="menuitem">Cybersecurity</a>
-                            <a href="/services/cloud-infrastructure/" class="dropdown-link" role="menuitem">Cloud</a>
-                            <a href="/services/it-consulting/" class="dropdown-link" role="menuitem">IT Consulting</a>
+                            <a href="../services/web-design/" class="dropdown-link" role="menuitem">Web Design</a>
+                            <a href="../services/managed-it/" class="dropdown-link" role="menuitem">Managed IT</a>
+                            <a href="../services/cybersecurity/" class="dropdown-link" role="menuitem">Cybersecurity</a>
+                            <a href="../services/cloud-infrastructure/" class="dropdown-link" role="menuitem">Cloud</a>
+                            <a href="../services/it-consulting/" class="dropdown-link" role="menuitem">IT Consulting</a>
                         </div>
                     </div>
-                    <div class="nav-item"><a href="/case-studies/" class="nav-link active">Case Studies</a></div>
-                    <div class="nav-item"><a href="/resources/" class="nav-link">Resources</a></div>
-                    <div class="nav-item"><a href="/contact/" class="nav-link">Contact</a></div>
+                    <div class="nav-item"><a href="./" class="nav-link active">Case Studies</a></div>
+                    <div class="nav-item"><a href="../resources/" class="nav-link">Resources</a></div>
+                    <div class="nav-item"><a href="../contact/" class="nav-link">Contact</a></div>
                 </nav>
                 <div class="header-actions">
-                    <a href="/contact/" class="btn btn-primary">Get Started</a>
+                    <a href="../contact/" class="btn btn-primary">Get Started</a>
                     <button class="header-toggle lang-toggle" id="langToggle" aria-label="Toggle language" type="button">FR</button>
                     <button class="header-toggle theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button"><svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button>
                     <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu" type="button"><span></span><span></span><span></span></button>
@@ -71,12 +71,12 @@
     </header>
     <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
         <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
-            <a href="/" class="mobile-nav-link">Home</a>
-            <a href="/about-us/" class="mobile-nav-link">About Us</a>
-            <a href="/#services" class="mobile-nav-link">Services</a>
-            <a href="/case-studies/" class="mobile-nav-link">Case Studies</a>
-            <a href="/resources/" class="mobile-nav-link">Resources</a>
-            <a href="/contact/" class="mobile-nav-link">Contact</a>
+            <a href="../" class="mobile-nav-link">Home</a>
+            <a href="../about-us/" class="mobile-nav-link">About Us</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="./" class="mobile-nav-link">Case Studies</a>
+            <a href="../resources/" class="mobile-nav-link">Resources</a>
+            <a href="../contact/" class="mobile-nav-link">Contact</a>
         </nav>
     </div>
 
@@ -147,7 +147,7 @@
                 <div class="cta-content">
                     <h2>Ready to Write Your Success Story?</h2>
                     <p>Let's discuss how we can help your business achieve similar results.</p>
-                    <a href="/contact/" class="btn btn-primary btn-lg">Start Your Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                    <a href="../contact/" class="btn btn-primary btn-lg">Start Your Project<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
                 </div>
             </div>
         </div>
@@ -157,15 +157,15 @@
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-brand"><a href="/" class="logo" style="color: white;" aria-label="Nestego"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#FF6B5A"/><path d="M9 18L16 11L23 18L16 25Z" fill="white"/><path d="M16 18L23 11L30 18L23 25Z" fill="white" fill-opacity="0.7"/></svg></span><span class="logo-text">Nestego</span></a><p>Your trusted partner for web design, managed IT services, and cybersecurity solutions.</p><div class="footer-social"><a href="https://ca.linkedin.com/company/nestego" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://x.com/Nestego" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a></div></div>
-                <nav class="footer-nav"><h4>Services</h4><div class="footer-links"><a href="/services/web-design/" class="footer-link">Web Design</a><a href="/services/managed-it/" class="footer-link">Managed IT</a><a href="/services/cybersecurity/" class="footer-link">Cybersecurity</a><a href="/services/cloud-infrastructure/" class="footer-link">Cloud</a><a href="/services/it-consulting/" class="footer-link">Consulting</a></div></nav>
-                <nav class="footer-nav"><h4>Company</h4><div class="footer-links"><a href="/about-us/" class="footer-link">About Us</a><a href="/case-studies/" class="footer-link">Case Studies</a><a href="/resources/" class="footer-link">Resources</a><a href="/contact/" class="footer-link">Contact</a></div></nav>
+                <div class="footer-brand"><a href="../" class="logo" style="color: white;" aria-label="Nestego"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="8" fill="#FF6B5A"/><path d="M9 18L16 11L23 18L16 25Z" fill="white"/><path d="M16 18L23 11L30 18L23 25Z" fill="white" fill-opacity="0.7"/></svg></span><span class="logo-text">Nestego</span></a><p>Your trusted partner for web design, managed IT services, and cybersecurity solutions.</p><div class="footer-social"><a href="https://ca.linkedin.com/company/nestego" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://x.com/Nestego" class="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a></div></div>
+                <nav class="footer-nav"><h4>Services</h4><div class="footer-links"><a href="../services/web-design/" class="footer-link">Web Design</a><a href="../services/managed-it/" class="footer-link">Managed IT</a><a href="../services/cybersecurity/" class="footer-link">Cybersecurity</a><a href="../services/cloud-infrastructure/" class="footer-link">Cloud</a><a href="../services/it-consulting/" class="footer-link">Consulting</a></div></nav>
+                <nav class="footer-nav"><h4>Company</h4><div class="footer-links"><a href="../about-us/" class="footer-link">About Us</a><a href="./" class="footer-link">Case Studies</a><a href="../resources/" class="footer-link">Resources</a><a href="../contact/" class="footer-link">Contact</a></div></nav>
                 <div class="footer-contact"><h4>Contact Us</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@nestego.com">info@nestego.com</a></div><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+15148235652">+1 (514) 823-5652</a></div><div class="footer-contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Montréal, QC</span></div></div>
             </div>
-            <div class="footer-bottom"><p class="footer-copyright" id="copyright"></p><div class="footer-legal"><a href="/legal/privacy">Privacy</a><a href="/legal/terms">Terms</a></div></div>
+            <div class="footer-bottom"><p class="footer-copyright" id="copyright"></p><div class="footer-legal"><a href="../legal/privacy">Privacy</a><a href="../legal/terms">Terms</a></div></div>
         </div>
     </footer>
     
-    <script src="/assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
