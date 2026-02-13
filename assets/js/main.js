@@ -264,6 +264,61 @@
         updateHeader(); // Initial check
     }
 
+
+    function initServicesMenus() {
+        const servicesDesktopLink = document.querySelector('.nav .nav-item > .nav-link[aria-haspopup="true"]');
+        if (servicesDesktopLink) {
+            servicesDesktopLink.setAttribute('href', '#');
+            servicesDesktopLink.addEventListener('click', function(e) {
+                e.preventDefault();
+            });
+        }
+
+        const mobileNav = document.querySelector('.mobile-nav');
+        const servicesDropdown = document.querySelector('.nav .nav-item .dropdown-menu');
+        if (!mobileNav || !servicesDropdown) return;
+
+        const servicesMobileLink = Array.from(mobileNav.querySelectorAll('.mobile-nav-link')).find(link => {
+            const text = (link.textContent || '').trim().toLowerCase();
+            return text === 'services';
+        });
+
+        if (!servicesMobileLink || mobileNav.querySelector('.mobile-services-toggle')) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'mobile-services-item';
+
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'mobile-nav-link mobile-services-toggle';
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.innerHTML = `${servicesMobileLink.textContent.trim()}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+
+        const submenu = document.createElement('div');
+        submenu.className = 'mobile-services-submenu';
+
+        servicesDropdown.querySelectorAll('a.dropdown-link').forEach(link => {
+            const subLink = document.createElement('a');
+            subLink.className = 'mobile-sub-link';
+            subLink.href = link.getAttribute('href');
+            subLink.textContent = link.textContent.trim();
+            if (link.classList.contains('active')) {
+                subLink.classList.add('active');
+            }
+            submenu.appendChild(subLink);
+        });
+
+        toggle.addEventListener('click', function() {
+            const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', String(!isOpen));
+            submenu.classList.toggle('active', !isOpen);
+        });
+
+        wrapper.appendChild(toggle);
+        wrapper.appendChild(submenu);
+        servicesMobileLink.replaceWith(wrapper);
+    }
+
     // ============================================
     // Mobile Menu
     // ============================================
@@ -548,6 +603,7 @@
         initThemeToggle();
         initLanguageToggle();
         initHeaderScroll();
+        initServicesMenus();
         initMobileMenu();
         initLogoAnimation();
         setActiveNavigation();
