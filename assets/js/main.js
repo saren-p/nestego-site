@@ -24,6 +24,7 @@
         '/services/cybersecurity/': '/fr/services/cybersecurite/',
         '/services/cloud-infrastructure/': '/fr/services/cloud-infrastructure/',
         '/services/it-consulting/': '/fr/services/conseil-ti-vcio/',
+        '/services/ai-implementation/': '/fr/services/implementation-ia/',
 
         // Legal
         '/legal/privacy/': '/fr/legal/confidentialite/',
