@@ -787,6 +787,9 @@ a:hover { color: var(--accent); }
 .code-line:nth-child(6) { animation-delay: 1.8s; }
 .code-line:nth-child(7) { animation-delay: 2.1s; }
 .code-line:nth-child(8) { animation-delay: 2.4s; }
+.code-line:nth-child(9) { animation-delay: 2.7s; }
+.code-line:nth-child(10) { animation-delay: 3s; }
+.code-line:nth-child(11) { animation-delay: 3.3s; }
 
 @keyframes typeLine {
     from { opacity: 0; transform: translateX(-10px); }
@@ -1268,7 +1271,7 @@ a:hover { color: var(--accent); }
 
 
 .case-section + .case-section {
-    margin-top: var(--space-2xl);
+    margin-top: 3rem;
 }
 
 .case-section > h2 {
