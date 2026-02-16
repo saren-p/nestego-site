@@ -597,17 +597,27 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const el = entry.target;
-                    const originalText = el.textContent;
+                    const originalText = el.textContent.trim();
+                    const dataCount = el.dataset.count;
+                    const dataSuffix = el.dataset.suffix;
 
-                    // Parse the value - handle formats like "10+", "150+", "99.9%"
-                    const match = originalText.match(/^([\d.]+)(\+?%?)$/);
-                    if (!match) {
-                        countObserver.unobserve(el);
-                        return;
+                    let targetValue;
+                    let suffix;
+
+                    if (dataCount) {
+                        targetValue = parseFloat(dataCount);
+                        suffix = dataSuffix || '';
+                    } else {
+                        // Parse the value - handle formats like "10+", "150+", "99.9%"
+                        const match = originalText.match(/^([\d.]+)(\+?%?)$/);
+                        if (!match) {
+                            countObserver.unobserve(el);
+                            return;
+                        }
+
+                        targetValue = parseFloat(match[1]);
+                        suffix = match[2]; // + or % or empty
                     }
-
-                    const targetValue = parseFloat(match[1]);
-                    const suffix = match[2]; // + or % or empty
 
                     if (prefersReducedMotion) {
                         // Just show final value without animation
