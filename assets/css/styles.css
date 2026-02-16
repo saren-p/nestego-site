@@ -896,48 +896,70 @@ a:hover { color: var(--accent); }
 }
 .credibility-inner {
     display: grid;
-    gap: 2.5rem;
-    align-items: center;
-}
-@media (min-width: 768px) { 
-    .credibility-inner { 
-        grid-template-columns: 1fr auto 1fr; 
-        gap: 3rem; 
-    } 
-}
-.credibility-text { 
-    color: rgba(255,255,255,0.7); 
-    font-size: 0.9375rem; 
-}
-.credibility-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 2rem;
     align-items: center;
 }
-.logo-item {
-    height: 32px;
-    opacity: 0.5;
-    transition: opacity var(--transition-base);
+@media (min-width: 768px) {
+    .credibility-inner {
+        grid-template-columns: minmax(260px, 1fr) minmax(0, 1.4fr);
+        gap: 3rem;
+    }
+}
+.credibility-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    align-items: flex-start;
+}
+.credibility-text {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9375rem;
+}
+.credibility-substats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.cred-substat {
+    color: white;
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+.credibility-right {
+    width: 100%;
+    min-width: 0;
+    justify-self: end;
+}
+.industry-marquee {
+    overflow: hidden;
+    width: 100%;
+}
+.industry-track {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    width: max-content;
+    animation: marquee 22s linear infinite;
+    will-change: transform;
+}
+.industry-item {
+    display: inline-flex;
+    align-items: center;
+    min-height: 34px;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.07);
     color: white;
-    font-weight: 600;
     font-size: 0.875rem;
+    font-weight: 600;
+    white-space: nowrap;
 }
-.logo-item:hover { opacity: 0.8; }
-.credibility-stats { display: flex; gap: 2rem; justify-content: flex-end; }
-.cred-stat { text-align: right; }
-.cred-stat-value {
-    font-family: var(--font-heading);
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
-}
-.cred-stat-label { 
-    font-size: 0.8125rem; 
-    color: rgba(255,255,255,0.6); 
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
 @media (max-width: 767px) {
@@ -945,14 +967,23 @@ a:hover { color: var(--accent); }
         justify-items: center;
         text-align: center;
     }
-    .credibility-stats {
+    .credibility-left {
+        align-items: center;
+    }
+    .credibility-right {
+        justify-self: stretch;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .industry-track {
+        animation: none;
+        width: 100%;
+        flex-wrap: wrap;
         justify-content: center;
     }
-    .cred-stat {
-        text-align: center;
-    }
-    .credibility-logos {
-        gap: 1.25rem;
+    .industry-item {
+        white-space: normal;
     }
 }
 /* Problems Section */
