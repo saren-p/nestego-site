@@ -940,6 +940,21 @@ a:hover { color: var(--accent); }
     color: rgba(255,255,255,0.6); 
 }
 
+@media (max-width: 767px) {
+    .credibility-inner {
+        justify-items: center;
+        text-align: center;
+    }
+    .credibility-stats {
+        justify-content: center;
+    }
+    .cred-stat {
+        text-align: center;
+    }
+    .credibility-logos {
+        gap: 1.25rem;
+    }
+}
 /* Problems Section */
 .problems { background: var(--card-bg); }
 
