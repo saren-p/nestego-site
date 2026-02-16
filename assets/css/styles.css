@@ -2503,6 +2503,22 @@ a:hover { color: var(--accent); }
 }
 
 
+@media (max-width: 767px) {
+    .hero-image-container {
+        aspect-ratio: 4 / 4.7;
+    }
+
+    .hero-image-placeholder {
+        padding: 1.25rem;
+    }
+
+    .code-content {
+        font-size: 0.67rem;
+        line-height: 1.6;
+    }
+}
+
+
 .article-page{max-width:1000px;}
 .article-page h1{margin:0.5rem 0 1rem;}
 .article-description{font-size:1.1rem;opacity:.85;margin-bottom:1rem;}
