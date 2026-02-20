@@ -635,6 +635,21 @@
         countElements.forEach(el => countObserver.observe(el));
     }
 
+    function initImageFallbacks() {
+        const fallbackImages = document.querySelectorAll('img[data-remote-fallback]');
+
+        fallbackImages.forEach(img => {
+            const remoteSrc = img.getAttribute('data-remote-fallback');
+            if (!remoteSrc) return;
+
+            img.addEventListener('error', function handleError() {
+                if (img.dataset.fallbackApplied === 'true') return;
+                img.dataset.fallbackApplied = 'true';
+                img.src = remoteSrc;
+            }, { once: true });
+        });
+    }
+
     function animateCount(element, targetValue, suffix) {
         const duration = 2000; // 2 seconds
         const startTime = performance.now();
@@ -690,6 +705,7 @@
         initContactForm();
         initScrollReveal();
         initCountUp();
+        initImageFallbacks();
     }
 
     // Run on DOM ready
