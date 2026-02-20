@@ -1847,6 +1847,9 @@ a:hover { color: var(--accent); }
     border-radius: var(--radius-lg);
     overflow: hidden;
     transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 [data-theme="dark"] .team-card { 
     background: var(--background); 
@@ -1863,15 +1866,37 @@ a:hover { color: var(--accent); }
 }
 .team-card:hover .team-image { transform: scale(1.05); }
 
-.team-info { padding: 1.5rem; text-align: center; }
-.team-name { font-size: 1.125rem; margin-bottom: 0.25rem; }
+.team-info {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.team-name {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.35;
+    min-height: calc(2 * 1.35em);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 .team-role {
     font-size: 0.875rem;
     color: var(--accent);
     font-weight: 500;
     margin-bottom: 0.75rem;
+    line-height: 1.4;
+    min-height: calc(1 * 1.4em);
 }
-.team-bio { font-size: 0.875rem; opacity: 0.7; line-height: 1.5; }
+.team-bio {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    line-height: 1.5;
+    margin-top: 0;
+}
 
 /* Features Grid */
 .features-grid { display: grid; gap: 1.5rem; margin-top: 3rem; }
