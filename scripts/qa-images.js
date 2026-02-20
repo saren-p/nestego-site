@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
+const LISTING_FILES = ['resources/index.html', 'fr/ressources/index.html'];
 
 function walk(dir) {
   const out = [];
@@ -21,6 +22,18 @@ function getAttrs(tag) {
     attrs[match[1].toLowerCase()] = match[3];
   }
   return attrs;
+}
+
+function isRemoteOrData(value) {
+  return /^https?:\/\//i.test(value) || /^data:/i.test(value);
+}
+
+function checkListingAssetExists(rel, ref, errors) {
+  if (!ref || isRemoteOrData(ref)) return;
+  const abs = path.resolve(path.dirname(path.join(ROOT, rel)), ref);
+  if (!fs.existsSync(abs)) {
+    errors.push(`${rel}: missing local asset -> ${ref}`);
+  }
 }
 
 const files = walk(ROOT);
@@ -43,7 +56,6 @@ for (const file of files) {
       errors.push(`${rel}: data-remote-fallback must be remote URL -> ${fallback}`);
     }
     if (src && !/^https?:\/\//i.test(src) && !src.includes('assets/images/') && !src.includes('../assets/images/') && !src.includes('../../assets/images/')) {
-      // only enforce for migrated images
       if (fallback) errors.push(`${rel}: migrated image src must be under assets/images -> ${src}`);
     }
 
@@ -52,6 +64,17 @@ for (const file of files) {
       if (!resolved.includes('/assets/images/')) {
         errors.push(`${rel}: relative path resolves outside assets/images -> ${src}`);
       }
+    }
+
+    if (LISTING_FILES.includes(rel)) {
+      checkListingAssetExists(rel, src, errors);
+    }
+  }
+
+  if (LISTING_FILES.includes(rel)) {
+    for (const m of text.matchAll(/<source\b[^>]*>/gi)) {
+      const attrs = getAttrs(m[0]);
+      checkListingAssetExists(rel, attrs.srcset || '', errors);
     }
   }
 }
