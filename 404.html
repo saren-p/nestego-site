@@ -15,10 +15,23 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect fill='%23143A66' width='32' height='32' rx='6'/%3E%3Cpath d='M8 16L14 10L20 16L14 22Z' fill='%23FF6B5A'/%3E%3Cpath d='M14 16L20 10L26 16L20 22Z' fill='%23F5F7FA' opacity='0.9'/%3E%3C/svg%3E">
 
+    <base id="baseHref" href="/">
+    <script>
+      (function () {
+        var base = document.getElementById("baseHref");
+        var path = window.location.pathname;
+
+        if (path.startsWith("/nestego-site/")) {
+          base.setAttribute("href", "/nestego-site/");
+        } else {
+          base.setAttribute("href", "/");
+        }
+      })();
+    </script>
+
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header" id="header" role="banner">
         <div class="container">
             <div class="header-inner">
@@ -34,12 +47,8 @@
                 </a>
 
                 <nav class="nav" role="navigation" aria-label="Main navigation">
-                    <div class="nav-item">
-                        <a href="./" class="nav-link">Home</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="about-us/" class="nav-link">About Us</a>
-                    </div>
+                    <div class="nav-item"><a href="./" class="nav-link">Home</a></div>
+                    <div class="nav-item"><a href="about-us/" class="nav-link">About Us</a></div>
                     <div class="nav-item">
                         <a href="services/" class="nav-link" aria-haspopup="true" aria-expanded="false">
                             Services
@@ -54,27 +63,18 @@
                             <a href="services/ai-implementation/" class="dropdown-link" role="menuitem">AI Implementation</a>
                         </div>
                     </div>
-                    <div class="nav-item">
-                        <a href="case-studies/" class="nav-link">Case Studies</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="resources/" class="nav-link">Resources</a>
-                    </div>
-                    <div class="nav-item">
-                        <a href="contact/" class="nav-link">Contact</a>
-                    </div>
+                    <div class="nav-item"><a href="case-studies/" class="nav-link">Case Studies</a></div>
+                    <div class="nav-item"><a href="resources/" class="nav-link">Resources</a></div>
+                    <div class="nav-item"><a href="contact/" class="nav-link">Contact</a></div>
                 </nav>
 
                 <div class="header-actions">
                     <a href="contact/" class="btn btn-primary">Talk to Nestego</a>
-
                     <button class="header-toggle lang-toggle" id="langToggle" aria-label="Toggle language" type="button">FR</button>
-
                     <button class="header-toggle theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
                         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
                         <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                     </button>
-
                     <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
                         <span></span><span></span><span></span>
                     </button>
@@ -83,7 +83,6 @@
         </div>
     </header>
 
-    <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
         <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
             <a href="./" class="mobile-nav-link">Home</a>
@@ -96,21 +95,16 @@
     </div>
 
     <main>
-        <section class="section section-wrapper" aria-labelledby="error-heading">
-            <div class="container">
-                <div class="section-box" style="max-width: 760px; margin: 0 auto;">
-                    <h1 id="error-heading">Page not found</h1>
-                    <p style="margin-top: 1rem; opacity: 0.85;">
-                        Sorry — we can’t find that page. It may have moved or the link is outdated.
-                    </p>
-
-                    <div class="hero-cta" style="margin-top: 2rem;">
-                        <a href="./" class="btn btn-primary btn-lg">Back to Home</a>
-                        <a href="contact/" class="btn btn-outline btn-lg">Contact</a>
+        <section class="section" style="padding-top: 8rem; min-height: 60vh; display: flex; align-items: center;">
+            <div class="container" style="max-width: 860px;">
+                <div id="content-en">
+                    <h1>Page not found</h1>
+                    <p style="margin-top: 1rem;">Sorry — we can’t find that page. It may have moved or the link is outdated.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="./" class="btn btn-primary">Back to Home</a>
                     </div>
-
                     <div style="margin-top: 2rem;">
-                        <h2 style="font-size: 1.25rem; margin-bottom: 0.75rem;">Helpful links</h2>
+                        <h2 style="margin-bottom: 0.75rem;">Helpful links</h2>
                         <ul style="display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; list-style: none; padding: 0; margin: 0;">
                             <li><a href="./">Home</a></li>
                             <li><a href="about-us/">About Us</a></li>
@@ -120,10 +114,25 @@
                             <li><a href="contact/">Contact</a></li>
                         </ul>
                     </div>
+                </div>
 
-                    <p style="margin-top: 1.5rem; opacity: 0.75; font-size: 0.95rem;">
-                        If you typed the address, double-check the spelling.
-                    </p>
+                <div id="content-fr" hidden>
+                    <h1>Page introuvable</h1>
+                    <p style="margin-top: 1rem;">Désolé — cette page est introuvable. Elle a peut-être été déplacée ou le lien est incorrect.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="fr/" class="btn btn-primary">Retour à l’accueil</a>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <h2 style="margin-bottom: 0.75rem;">Liens utiles</h2>
+                        <ul style="display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; list-style: none; padding: 0; margin: 0;">
+                            <li><a href="fr/">Accueil</a></li>
+                            <li><a href="fr/a-propos/">À propos</a></li>
+                            <li><a href="fr/services/">Services</a></li>
+                            <li><a href="fr/realisations/">Réalisations</a></li>
+                            <li><a href="fr/ressources/">Ressources</a></li>
+                            <li><a href="fr/contact/">Contact</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -186,13 +195,38 @@
             <div class="footer-bottom">
                 <p class="footer-copyright" id="copyright"></p>
                 <div class="footer-legal">
-                    <a href="legal/privacy">Privacy Policy</a>
-                    <a href="legal/terms">Terms of Service</a>
+                    <a href="legal/privacy/">Privacy Policy</a>
+                    <a href="legal/terms/">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var isFr = path.indexOf('/fr/') !== -1 || path.indexOf('/nestego-site/fr/') === 0;
+        var en = document.getElementById('content-en');
+        var fr = document.getElementById('content-fr');
+        var langToggle = document.getElementById('langToggle');
+
+        if (isFr) {
+          document.documentElement.setAttribute('lang', 'fr-CA');
+          fr.hidden = false;
+          en.hidden = true;
+          if (langToggle) {
+            langToggle.textContent = 'EN';
+          }
+        } else {
+          document.documentElement.setAttribute('lang', 'en-CA');
+          fr.hidden = true;
+          en.hidden = false;
+          if (langToggle) {
+            langToggle.textContent = 'FR';
+          }
+        }
+      })();
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
