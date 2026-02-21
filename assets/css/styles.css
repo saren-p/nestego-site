@@ -2229,12 +2229,15 @@ body.contact-page .contact-grid {
 .form-header p { color: var(--muted); }
 
 .form-grid { display: grid; gap: 1.25rem; }
-@media (min-width: 640px) { .form-grid { grid-template-columns: repeat(2, 1fr); } }
-.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+@media (min-width: 640px) { .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
 .form-group.full-width { grid-column: 1 / -1; }
 .form-label { font-size: 0.875rem; font-weight: 500; color: var(--secondary); }
 
 .form-input, .form-select, .form-textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     padding: 0.875rem 1rem;
     border: 1px solid var(--border);
     border-radius: var(--radius-sm);
