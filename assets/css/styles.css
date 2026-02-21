@@ -1866,6 +1866,19 @@ a:hover { color: var(--accent); }
 }
 .team-card:hover .team-image { transform: scale(1.05); }
 
+.team-image-founder {
+    object-fit: cover;
+    object-position: 50% 15%;
+}
+
+.team-card:hover .team-image-founder { transform: none; }
+
+[data-theme="light"] .team-image-founder { object-position: 50% 15%; }
+
+@media (max-width: 768px) {
+    .team-image-founder { object-position: 50% 10%; }
+}
+
 .team-info {
     padding: 1.5rem;
     text-align: center;
