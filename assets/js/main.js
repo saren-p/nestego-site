@@ -524,8 +524,7 @@
             }
 
             try {
-                // POST to Cloudflare Worker endpoint
-                const response = await fetch('/api/contact', {
+                const response = await fetch('/api/contact.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -536,14 +535,18 @@
                     })
                 });
 
-                if (response.ok) {
+                const result = await response.json().catch(() => null);
+
+                if (response.ok && result && result.ok) {
                     showToast('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
                     form.reset();
                 } else {
-                    throw new Error('Server error');
+                    const backendError = result && result.error ? result.error : 'Server error';
+                    throw new Error(backendError);
                 }
             } catch (error) {
-                showToast('Failed to send message. Please try again or email us directly.', 'error');
+                const fallbackMessage = 'Failed to send message. Please try again or email us directly.';
+                showToast(error && error.message ? error.message : fallbackMessage, 'error');
             } finally {
                 // Restore button state
                 if (submitBtn) {

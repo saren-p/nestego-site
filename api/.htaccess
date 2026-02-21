@@ -1,0 +1,18 @@
+Options -Indexes
+DirectoryIndex disabled
+
+RewriteEngine On
+
+# Block directory access
+RewriteRule ^$ - [F,L]
+
+# Allow contact.php and optional health.php only
+RewriteCond %{REQUEST_URI} !^/api/contact\.php$ [NC]
+RewriteCond %{REQUEST_URI} !^/api/health\.php$ [NC]
+RewriteRule ^ - [F,L]
+
+<FilesMatch "\.(php)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>
