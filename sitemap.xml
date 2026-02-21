@@ -145,7 +145,25 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
+    <!-- AI Implementation -->
+    <url>
+        <loc>https://www.nestego.com/services/ai-implementation/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/services/ai-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/services/implementation-ia/"/>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.nestego.com/fr/services/implementation-ia/</loc>
+        <xhtml:link rel="alternate" hreflang="en-CA" href="https://www.nestego.com/services/ai-implementation/"/>
+        <xhtml:link rel="alternate" hreflang="fr-CA" href="https://www.nestego.com/fr/services/implementation-ia/"/>
+        <lastmod>2026-02-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
     <!-- Case Studies -->
     <url>
         <loc>https://www.nestego.com/case-studies/</loc>
