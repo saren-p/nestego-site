@@ -507,6 +507,15 @@
                 return;
             }
 
+            const turnstileToken = data['cf-turnstile-response'];
+            if (!turnstileToken || turnstileToken.trim() === '') {
+                const securityMessage = getCurrentLanguage() === 'fr'
+                    ? 'Veuillez compléter la vérification de sécurité.'
+                    : 'Please complete the security check.';
+                showToast(securityMessage, 'error');
+                return;
+            }
+
             // Show sending state
             if (submitBtn) {
                 originalBtnText = submitBtn.innerHTML;
@@ -516,12 +525,15 @@
 
             try {
                 // POST to Cloudflare Worker endpoint
-                const response = await fetch('https://YOUR-WORKER-URL.example/submit', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify({
+                        ...data,
+                        'cf-turnstile-response': turnstileToken
+                    })
                 });
 
                 if (response.ok) {
