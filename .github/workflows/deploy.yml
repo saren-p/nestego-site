@@ -24,16 +24,21 @@ jobs:
           server-dir: ${{ secrets.FTP_PATH }}
           dangerous-clean-slate: false
           exclude: |
-            **/.git*
+            .git
+            .git/**
+            .github
+            .github/**
+            **/.git
+            **/.git/**
+            **/.github
             **/.github/**
             **/node_modules/**
             **/.DS_Store
             **/*.zip
+            **/*.log
+            **/*.tmp
+            **/*.bak
             docs/**
             reports/**
             scripts/**
             CODEX_WRITE_TEST.txt
-            .nojekyll
-            **/*.log
-            **/*.tmp
-            **/*.bak
