@@ -1,0 +1,39 @@
+# Deploys the static production site to StableHost via FTP.
+# The remote target directory is provided by the FTP_PATH repository secret.
+# Required GitHub Actions secrets must already exist in repository settings.
+name: Deploy to StableHost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: ${{ secrets.FTP_PATH }}
+          dangerous-clean-slate: false
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            **/*.zip
+            docs/**
+            reports/**
+            scripts/**
+            CODEX_WRITE_TEST.txt
+            .nojekyll
+            **/*.log
+            **/*.tmp
+            **/*.bak
