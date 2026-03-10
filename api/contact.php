@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Content-Type-Options: nosniff');
 
@@ -84,22 +82,19 @@ if ($turnstileToken === '') {
 
 $clientIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $verifyPayload = http_build_query([
-    'secret' => 'XXXXX',
+    'secret' => 'YOUR_TURNSTILE_SECRET_KEY_HERE',
     'response' => $turnstileToken,
     'remoteip' => $clientIp,
 ]);
 
-$context = stream_context_create([
-    'http' => [
-        'method' => 'POST',
-        'header' => "Content-Type: application/x-www-form-urlencoded\r\n"
-            . 'Content-Length: ' . strlen($verifyPayload) . "\r\n",
-        'content' => $verifyPayload,
-        'timeout' => 10,
-    ],
-]);
-
-$verifyResponse = @file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $context);
+$ch = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $verifyPayload);
+curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/x-www-form-urlencoded']);
+$verifyResponse = curl_exec($ch);
+curl_close($ch);
 $verifyData = is_string($verifyResponse) ? json_decode($verifyResponse, true) : null;
 
 if (!is_array($verifyData) || empty($verifyData['success'])) {
@@ -109,7 +104,7 @@ if (!is_array($verifyData) || empty($verifyData['success'])) {
 }
 
 $recipient = 'info@nestego.com';
-$subject = 'New website inquiry — ' . $name;
+$subject = 'New website inquiry - ' . $name;
 if ($company !== '') {
     $subject .= ' (' . $company . ')';
 }
